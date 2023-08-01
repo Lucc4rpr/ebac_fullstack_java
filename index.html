@@ -3,31 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
 </head>
 <body>
-    <table border="1" width="600px">
-        <caption>TABELA PARA CONTROLE TAL</caption>
-        <thead>
-            <tr>
-                <th>Cabeçalho da Coluna 1</th>
-                <th>Cabeçalho da Coluna 2</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Linha 1 Coluna 1</td>
-                <td>Linha 1 Coluna 2</td>
-            </tr>
-            <tr>
-                <td>Linha 2 Coluna 1</td>
-                <td>Linha 2 Coluna 2</td>
-            </tr>
-            <tr>
-                <td>Linha 3 Coluna 1</td>
-                <td>Linha 3 Coluna 2</td>
-            </tr>
-        </tbody>
-    </table>
+    <h1>Formulário</h1>
+    <form action="PagDestino.html" method="POST">
+        <label>Nome: <br/>
+            <input type="text" placeholder="Seu Nome" name="username" required minlength="2"/>
+        </label><br/><br/>
+
+        <label>Email: <br/>
+            <input type="email" placeholder="email@exemplo.com.br" name="email" required pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" title="Endereço de Email"/>
+        </label><br><br>
+
+        <label>Senha: <br/>
+            <input type="password" placeholder="Sua Senha" name="usrpasswd" required title="Crie sua senha"/>
+        </label><br><br>
+        
+        <input type="submit" value="Cadastrar"/>
+        <input type="reset" value="Limpar"/>
+    </form>
 </body>
 </html>
