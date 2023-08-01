@@ -1,0 +1,164 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body > header {
+    background-color: #2f3640;
+    padding: 16px 0;
+    color: #f5f6fa;
+}
+
+header .container {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin-left: 10px;
+}
+
+header li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+}
+
+time {
+    font-style:italic;
+}
+
+header li a {
+    color: #f5f6fa;
+    margin-right:20px;
+    text-decoration:none;
+}
+
+.container {
+    width: 1349px;
+    margin: 0 auto;
+}
+
+#seta {
+    width: 70px;
+    position: fixed;
+    bottom: 7px;
+    right: 7px;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles article img {
+    width:100%;
+    height:270px;
+}
+
+.articles article {
+    width: 30%;
+}
+
+section {
+    padding: 16px 0;
+}
+
+section h2,
+.articles article {
+    margin-bottom: 16px;
+}
+
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.articles article a {
+    color: white;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+    box-sizing: border-box;
+    height: 38px;
+    width: 90px;
+    display:flex;
+    justify-content: center;
+}
+
+
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+#sports {
+    background-color: rgba(0,255,0,0.1);
+}
+
+#sports .articles article a {
+    background-color: #009432;
+    border: 2px solid #086125;
+}
+
+#sports .articles article a:hover {
+    background-color:#b7e6c7;
+    color:black;
+}
+
+#economy {
+    background-color:#f8f59f;
+}
+
+#economy .articles article a {
+    background-color: #ff9f1a;
+    border: 2px solid #724a12;
+
+}
+
+#economy .articles article a:hover {
+    background-color:#f8f59f;
+    color:black;
+}
+
+
+#tech {
+    background-color: rgba(62, 87, 197, 0.37);
+}
+
+#tech .articles article a {
+    background-color: rgba(62, 87, 197, 0.7);
+    border: 2px solid rgba(26, 43, 119, 0.9);
+
+}
+
+#tech .articles article a:hover {
+    background-color:rgba(62, 87, 197, 0.37);
+    color:black;
+}
+
+
+#food {
+    background-color:rgba(197, 85, 20,0.3);
+}
+
+#food .articles article a {
+    background-color: rgba(197, 85, 20,0.6);
+    border: 2px solid rgba(145, 64, 18, 0.6);
+ 
+}
+
+#food .articles article a:hover {
+    background-color:rgba(197, 85, 20,0.3);
+    color:black;
+}
