@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML com JS</title>
+    <link rel="stylesheet" href="./main.css" />
 </head>
 <body>
-    <table border="1" width="600px">
-        <caption>TABELA PARA CONTROLE TAL</caption>
-        <thead>
-            <tr>
-                <th>Cabeçalho da Coluna 1</th>
-                <th>Cabeçalho da Coluna 2</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Linha 1 Coluna 1</td>
-                <td>Linha 1 Coluna 2</td>
-            </tr>
-            <tr>
-                <td>Linha 2 Coluna 1</td>
-                <td>Linha 2 Coluna 2</td>
-            </tr>
-            <tr>
-                <td>Linha 3 Coluna 1</td>
-                <td>Linha 3 Coluna 2</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="container">
+        <h1>EBAC Banking</h1>
+        <h2>Estoque</h2>
+        <form id="form-estoque">
+            <input type="number" id="valor-retirada" required placeholder="Quanto deseja retirar do estoque? (Campo A)" />
+            <input type="number" id="estoque-total" required placeholder="Quanto tem no estoque atualmente? (Campo B)" />
+            <button id="btn-verificar" type="submit">Verificar</button>
+        </form>
+        <p id="mensagem"></p>
+    </div>
+    <script src="./main.js"></script>
 </body>
 </html>
