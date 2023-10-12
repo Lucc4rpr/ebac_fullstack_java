@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css" />
 </head>
 <body>
-    <h1>Formulário</h1>
-    <form action="PagDestino.html" method="POST">
-        <label>Nome: <br/>
-            <input type="text" placeholder="Seu Nome" name="username" required minlength="2"/>
-        </label><br/><br/>
-
-        <label>Email: <br/>
-            <input type="email" placeholder="email@exemplo.com.br" name="email" required pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" title="Endereço de Email"/>
-        </label><br><br>
-
-        <label>Senha: <br/>
-            <input type="password" placeholder="Sua Senha" name="usrpasswd" required title="Crie sua senha"/>
-        </label><br><br>
-        
-        <input type="submit" value="Cadastrar"/>
-        <input type="reset" value="Limpar"/>
+    <header>
+        <h1>Lista de Tarefas</h1>
+        <button type="button">Nova Tarefa +</button>
+    </header>
+    <form>
+        <h2>Inserir nova Tarefa</h2>
+        <input type="text" id="endereco-imagem-nova" required placeholder="Digite sua tarefa" />
+        <button type="submit">Adicionar</button>
+        <button type="reset" id="botao-cancelar">Cancelar</button>
     </form>
+    <ul></ul>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="main.js"></script>
 </body>
 </html>
