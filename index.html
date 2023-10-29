@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucca Motors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-    <h1>Formulário</h1>
-    <form action="PagDestino.html" method="POST">
-        <label>Nome: <br/>
-            <input type="text" placeholder="Seu Nome" name="username" required minlength="2"/>
-        </label><br/><br/>
-
-        <label>Email: <br/>
-            <input type="email" placeholder="email@exemplo.com.br" name="email" required pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" title="Endereço de Email"/>
-        </label><br><br>
-
-        <label>Senha: <br/>
-            <input type="password" placeholder="Sua Senha" name="usrpasswd" required title="Crie sua senha"/>
-        </label><br><br>
-        
-        <input type="submit" value="Cadastrar"/>
-        <input type="reset" value="Limpar"/>
-    </form>
+    <header>
+        <div class="container">
+            <h1>Formulário</h1>
+        </div>
+    </header>
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form>
+                <div class="form-campo">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome"/>
+                </div>
+                <div class="form-campo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone"/>
+                </div>
+                <div class="form-campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email"/>
+                </div>
+                <div class="form-campo">
+                    <label for="cpf">CPF:</label>
+                    <input type="number_format" id="cpf" name="cpf"/>
+                </div>
+                <div class="form-campo">
+                    <label for="endereco">Endereço Completo</label>
+                    <input type="text" id="endereco" name="endereco"/>
+                </div>
+                <div class="form-campo">
+                    <label for="cep">CEP:</label>
+                    <input type="number_format" id="cep" name="cep"/>
+                </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>
+                2023 &copy; Atividade Formulário - Todos os Direitos Reservados.
+            </p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="./js/messages_pt_BR.min.js"></script>
 </body>
 </html>
+
