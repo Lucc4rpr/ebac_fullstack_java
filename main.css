@@ -1,0 +1,43 @@
+header {
+    padding: 15px 0;
+    background-color: #eee;
+}
+
+#header-id {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    background-color: #fff; /* Fundo branco para o header */
+    box-shadow: 0 4px 4px rgb(24, 90, 212, 0.1); /* Adiciona uma sombra para destaque */
+}
+
+.carousel-item {
+    height: 500px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+#inicio {
+    margin-bottom: 30px;
+}
+
+.custom-col img {
+    height: 300px; /* Defina a altura desejada */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    width: 100%; /* Mantém a largura da imagem em 100% do card */
+}
+
+.custom-col {
+    margin: 30px 0;
+}
+
