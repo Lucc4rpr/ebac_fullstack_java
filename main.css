@@ -1,20 +1,27 @@
-header {
-    padding: 15px 0;
-    background-color: #eee;
+body {
+    font-family: "Roboto", sans-serif;
+}
+.navbar {
+    background-color: #5229c0;
 }
 
-#header-id {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Garante que o header fique acima de outros elementos */
-    background-color: #fff; /* Fundo branco para o header */
-    box-shadow: 0 4px 4px rgb(24, 90, 212, 0.1); /* Adiciona uma sombra para destaque */
+#cabecalho .nav .nav-link.active {
+    background-color: #fff;
+    color: #5229c0;
+}
+
+#cabecalho .nav .nav-link,
+.nav-documentacao .nav-link.active:hover {
+    color:#fff;
+}
+
+.navbar-toggler {
+    background-color: #ffeae6;
 }
 
 .carousel-item {
     height: 500px; 
     position: relative;
-    overflow: hidden;
 }
 
 .carousel-item img {
@@ -27,17 +34,58 @@ header {
     object-fit: cover;
 }
 
+.section-title-font {
+    font-family: "Pacifico", cursive;
+}    
+
+h1.section-title-font {
+    font-family: "Pacifico", cursive;
+    font-size: 46px;
+    color:#fff;
+}
+
+.title-colored {
+    color:#5229c0;
+}
+
 #inicio {
-    margin-bottom: 30px;
+    background-color: rgba(14, 107, 214, 0.3);
 }
 
-.custom-col img {
-    height: 300px; /* Defina a altura desejada */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
-    width: 100%; /* Mantém a largura da imagem em 100% do card */
+.nav-documentacao .nav-link.active,
+#fale-conosco button {
+    background-color: #5229c0;
+    color:#FFF;
 }
 
-.custom-col {
-    margin: 30px 0;
+.nav-documentacao .nav-link:hover {
+    color:#5229c0;
 }
 
+#documentacao {
+    background-color: rgba(14, 107, 214, 0.3);
+}
+
+.social-links li {
+    list-style: none;
+    display: inline;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+address {
+    display: inline;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #5229c0;
+    color:#ffffff;
+    
+}
+
+@media (max-width: 767px) {
+
+}
