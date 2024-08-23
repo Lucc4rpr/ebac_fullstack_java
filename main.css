@@ -1,91 +1,35 @@
-body {
-    font-family: "Roboto", sans-serif;
-}
-.navbar {
-    background-color: #5229c0;
-}
-
-#cabecalho .nav .nav-link.active {
-    background-color: #fff;
-    color: #5229c0;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
-#cabecalho .nav .nav-link,
-.nav-documentacao .nav-link.active:hover {
-    color:#fff;
+.produtos {
+    max-width: 640px;
+    width: 100%;
+    margin: 56px auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 1%;
 }
 
-.navbar-toggler {
-    background-color: #ffeae6;
+.produto {} /* bloco */
+
+.produto-imagem { /* elemento */
+    width: 100%;
 }
 
-.carousel-item {
-    height: 500px; 
-    position: relative;
+.produto-nome { /* elemento */
+    font-size: 1.2em;
+    margin: 8px 0;
 }
 
-.carousel-item img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-height: 100%;
-    width: auto;
-    object-fit: cover;
+.produto-descricao { /* elemento */
+    color: gray;
 }
 
-.section-title-font {
-    font-family: "Pacifico", cursive;
-}    
-
-h1.section-title-font {
-    font-family: "Pacifico", cursive;
-    font-size: 46px;
-    color:#fff;
-}
-
-.title-colored {
-    color:#5229c0;
-}
-
-#inicio {
-    background-color: rgba(14, 107, 214, 0.3);
-}
-
-.nav-documentacao .nav-link.active,
-#fale-conosco button {
-    background-color: #5229c0;
-    color:#FFF;
-}
-
-.nav-documentacao .nav-link:hover {
-    color:#5229c0;
-}
-
-#documentacao {
-    background-color: rgba(14, 107, 214, 0.3);
-}
-
-.social-links li {
-    list-style: none;
-    display: inline;
-}
-
-.social-links a {
-    text-decoration: none;
-}
-
-address {
-    display: inline;
-}
-
-footer {
-    padding: 20px 0;
-    background-color: #5229c0;
-    color:#ffffff;
-    
-}
-
-@media (max-width: 767px) {
-
+.em-destaque { /* modificador */
+    border: 2px solid gold;
+    padding: 8px;
+    background-color: #ffff42;
 }
