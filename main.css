@@ -13,22 +13,22 @@
     grid-column-gap: 1%;
 }
 
-.produto {} /* bloco */
+/* .produtos__item {}      bloco */
 
-.produto-imagem { /* elemento */
+.produtos__item-imagem { /* elemento */
     width: 100%;
 }
 
-.produto-nome { /* elemento */
+.produtos__item-nome { /* elemento */
     font-size: 1.2em;
     margin: 8px 0;
 }
 
-.produto-descricao { /* elemento */
+.produtos__item-descricao { /* elemento */
     color: gray;
 }
 
-.em-destaque { /* modificador */
+.produtos__item--em-destaque { /* modificador */
     border: 2px solid gold;
     padding: 8px;
     background-color: #ffff42;
