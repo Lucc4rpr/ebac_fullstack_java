@@ -3,12 +3,13 @@ $corHeader: #182C61;
 $corFonte: #fff;
 $corBotao: #44bd32;
 $corBotaoHover: #4cd137;
+$fontePrincipal: Roboto, sans-serif;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: $fontePrincipal;
 }
 
 body {
@@ -30,27 +31,27 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
 }
 
 .menu {
     display: flex;
-}
 
-.menu li {
-    font-weight: bold;
-    margin-left: 24px;
-}
+    li {
+        font-weight: bold;
+        margin-left: 24px;
 
-.menu li a {
-    color: $corFonte;
-    text-decoration: none;
+        a {
+            color: $corFonte;
+            text-decoration: none;
+        }
+    }
 }
 
 section {
@@ -80,11 +81,12 @@ section {
     border-radius: 8px;
     margin-top: 8px;
     text-decoration: none;
+
+    &:hover {
+        background-color: $corBotaoHover;
+    }
 }
 
-.product-button:hover {
-    background-color: $corBotaoHover;
-}
 
 @media screen and (max-width: 1023px) {
     .container {
