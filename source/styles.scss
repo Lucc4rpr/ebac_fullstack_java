@@ -1,19 +1,9 @@
-$corPrincipal: #f5f6fa;
-$corHeader: #182C61;
-$corFonte: #fff;
-$corBotao: #44bd32;
-$corBotaoHover: #4cd137;
-$fontePrincipal: Roboto, sans-serif;
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $fontePrincipal;
-}
+@use 'reset';
+@use 'variaveis';
+@use 'produtos';
 
 body {
-    background-color: $corPrincipal;
+    background-color: variaveis.$corPrincipal;
 }
 
 li {
@@ -27,7 +17,7 @@ li {
 }
 
 header {
-    background-color: $corHeader;
+    background-color: variaveis.$corHeader;
     position: sticky;
     top: 0;
     left: 0;
@@ -48,7 +38,7 @@ header {
         margin-left: 24px;
 
         a {
-            color: $corFonte;
+            color: variaveis.$corFonte;
             text-decoration: none;
         }
     }
@@ -58,37 +48,8 @@ section {
     padding: 56px 0;
 }
 
-.products {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 32.66%);
-    column-gap: 1%;
-    row-gap: 4%;
-    width: 100%;
-}
 
-.product-item img {
-    width: 100%;
-    border-radius: 16px;
-}
-
-.product-button {
-    display: block;
-    background-color: $corBotao;
-    color: $corFonte;
-    text-align: center;
-    padding: 8px 0;
-    border-radius: 8px;
-    margin-top: 8px;
-    text-decoration: none;
-
-    &:hover {
-        background-color: $corBotaoHover;
-    }
-}
-
-
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: variaveis.$tablet) {
     .container {
         max-width: 80%;
     }
@@ -99,7 +60,7 @@ section {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: variaveis.$mobile) {
     .products {
         display: block;
     }
