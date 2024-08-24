@@ -27,10 +27,12 @@ section {
   background-color: #4cd137;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  .container {
+  section .container,
+  header .container {
     max-width: 80%;
   }
-  .products {
+  section .container .products,
+  header .container .products {
     grid-template-columns: repeat(2, 48.5%);
     column-gap: 3%;
   }
@@ -38,6 +40,10 @@ section {
 @media (max-width: 767px) {
   .products {
     display: block;
+  }
+  section .container,
+  header .container {
+    max-width: 80%;
   }
   .product-item {
     margin-bottom: 32px;

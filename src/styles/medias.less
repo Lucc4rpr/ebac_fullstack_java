@@ -1,14 +1,16 @@
 @import "variables.less";  
 
 @media @breakpointTablet {
-    .container {
+    section .container,
+    header .container {
         max-width: 80%;
+      
+        .products {
+            grid-template-columns: repeat(2, 48.5%);
+            column-gap: 3%;
+        }
     }
 
-    .products {
-        grid-template-columns: repeat(2, 48.5%);
-        column-gap: 3%;
-    }
 }
 
 @media  @breakpointMobile {
@@ -16,6 +18,10 @@
         display: block;
     }
 
+    section .container,
+    header .container {
+        max-width: 80%;
+    }
     .product-item  {
         margin-bottom: 32px;
     }
