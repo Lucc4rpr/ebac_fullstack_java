@@ -1,68 +1,33 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     document.getElementById('btn-buscar-cep').addEventListener('click', function() {
-//         const xhttp = new XMLHttpRequest();
-//         const cep = document.getElementById('cep').value;
-//         const endpoint = `https://viacep.com.br/ws/${cep}/json`;
-
-//         xhttp.open('GET', endpoint);
-//         xhttp.send();
-//     })
-// }) 
-
-
 $(document).ready(function() {
-    $('#cep').mask('00000-000');
+    const nameElement = document.querySelector('#name');
+    const usernameElement = document.querySelector('#username');
+    const avatarElement = document.querySelector('#avatar');
+    const reposElement = document.querySelector('#repos');
+    const followersElement = document.querySelector('#followers');
+    const followingElement = document.querySelector('#following');
+    const linkElement = document.querySelector('#link');
 
-    $('#btn-buscar-cep').click(function() {
-        const cep = $('#cep').val();
-        const endpoint = `https://viacep.com.br/ws/${cep}/json`;
-        const botao = $(this);
-        $(botao).find('i').addClass('d-none');
-        $(botao).find('span').removeClass('d-none');
-
-
-        // $.ajax(endpoint).done(function(resposta) {
-        //     const logradouro = resposta.logradouro;
-        //     const bairro = resposta.bairro;
-        //     const cidade = resposta.localidade;
-        //     const estado = resposta.uf;
-        //     const endereco = `${logradouro}, ${bairro} - ${cidade} - ${estado}`;
-        //     $('#endereco').val(endereco);
-
-        //     setTimeout(function() {
-        //         $(botao).find('i').removeClass('d-none');
-        //         $(botao).find('span').addClass('d-none');    
-        //     }, 1000);
-        // })
-
-        fetch(endpoint)
+    fetch('https://api.github.com/users/Lucc4rpr')
         .then(function(resposta) {
+            if (!resposta.ok) {
+                throw new Error('Erro na requisição: ' + resposta.statusText);
+            }
             return resposta.json();
         })
         .then(function(json) {
-            const logradouro = json.logradouro;
-            const bairro = json.bairro;
-            const cidade = json.localidade;
-            const estado = json.uf;
-            const endereco = `${logradouro}, ${bairro} - ${cidade} - ${estado}`;
-            $('#endereco').val(endereco);
+            try {
+                nameElement.innerText = json.name;
+                usernameElement.innerText = json.login;
+                avatarElement.src = json.avatar_url;
+                followingElement.innerText = json.following;
+                followersElement.innerText = json.followers;
+                reposElement.innerText = json.public_repos;
+                linkElement.href = json.html_url;
+            } catch (error) {
+                alert("Ocorreu um erro ao exibir os dados: " + error.message);
+            }
         })
         .catch(function(erro) {
-            alert("Ocorreu um erro ao buscar o endereço, tente novamente mais tarde");
-        })
-        .finally(function() {
-            setTimeout(function() {
-                $(botao).find('i').removeClass('d-none');
-                $(botao).find('span').addClass('d-none');    
-            }, 1000);
-        })
-    })      
-
-    $('#formulario-pedido').submit(function(evento) {
-        evento.preventDefault();
-
-        if ($('#nome').val().length == 0) {
-            throw new Error('Digite o nome');
-        }
-    })
-})
+            alert("Ocorreu um erro ao buscar os dados: " + erro.message);
+        });
+});
