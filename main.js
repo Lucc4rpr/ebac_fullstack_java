@@ -1,33 +1,43 @@
-$(document).ready(function() {
-    const nameElement = document.querySelector('#name');
-    const usernameElement = document.querySelector('#username');
-    const avatarElement = document.querySelector('#avatar');
-    const reposElement = document.querySelector('#repos');
-    const followersElement = document.querySelector('#followers');
-    const followingElement = document.querySelector('#following');
-    const linkElement = document.querySelector('#link');
+// Função Construtora
+function Veiculo(modelo, fabricante, anoModelo, anoFabricação) {
+    this.modelo = modelo;
+    this.fabricante = fabricante;
+    this.anoModelo = anoModelo;
+    this.anoFabricação = anoFabricação;
+    this.acelerar = function() {
+        console.log('vrum');
+    };
+    this.exibirDetalhes = function() {
+        console.log(`Modelo: ${this.modelo}, Fabricante: ${this.fabricante}, Ano Modelo: ${this.anoModelo}, Ano Fabricação: ${this.anoFabricação}`);
+    };
+}
 
-    fetch('https://api.github.com/users/Lucc4rpr')
-        .then(function(resposta) {
-            if (!resposta.ok) {
-                throw new Error('Erro na requisição: ' + resposta.statusText);
-            }
-            return resposta.json();
-        })
-        .then(function(json) {
-            try {
-                nameElement.innerText = json.name;
-                usernameElement.innerText = json.login;
-                avatarElement.src = json.avatar_url;
-                followingElement.innerText = json.following;
-                followersElement.innerText = json.followers;
-                reposElement.innerText = json.public_repos;
-                linkElement.href = json.html_url;
-            } catch (error) {
-                alert("Ocorreu um erro ao exibir os dados: " + error.message);
-            }
-        })
-        .catch(function(erro) {
-            alert("Ocorreu um erro ao buscar os dados: " + erro.message);
-        });
-});
+// Heranças
+
+function Carro(modelo, fabricante, anoModelo, anoFabricação, portas) {
+    Veiculo.call(this, modelo, fabricante, anoModelo, anoFabricação);
+    this.portas = portas;
+    this.abrirPorta = function() {
+        console.log(`${this.portas} portas abertas.`);
+    };
+}
+
+
+function Moto(modelo, fabricante, anoModelo, anoFabricação, cavalos) {
+    Veiculo.call(this, modelo, fabricante, anoModelo, anoFabricação);
+    this.cavalos = cavalos;
+    this.derrapar = function() {
+        console.log(`${this.modelo} está derrapando`);
+    };
+}
+
+// Instâncias 
+
+const carroDoJoao = new Carro("Fiesta", "Ford", 2020, 2019, 4);
+const carroDaMaria = new Carro("Corolla", "Toyota", 2021, 2020, 4);
+const motoDoPedro = new Moto("CB1000", "Honda", 2021, 2020, 500);
+
+
+carroDoJoao.acelerar();
+carroDaMaria.exibirDetalhes();
+motoDoPedro.empinar(); 
