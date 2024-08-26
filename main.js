@@ -40,4 +40,4 @@ const motoDoPedro = new Moto("CB1000", "Honda", 2021, 2020, 500);
 
 carroDoJoao.acelerar();
 carroDaMaria.exibirDetalhes();
-motoDoPedro.empinar(); 
+motoDoPedro.derrapar(); 
